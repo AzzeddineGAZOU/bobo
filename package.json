@@ -12,7 +12,10 @@
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
     "fix:lint": "npm run lint -- --fix",
     "ci:test": "mocha -c --recursive --exit dist/test/unit",
-    "start": "nodemon index.ts"
+    "dev": "nodemon index.ts",
+    "start": "pm2 start index.ts",
+    "restart": "pm2 restart index.ts",
+    "stop": "pm2 stop index.ts"
   },
   "author": "dani",
   "license": "ISC",
