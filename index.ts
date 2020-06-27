@@ -56,7 +56,7 @@ createConnection({
     console.log('Connected to DB');
     // Connexion au serveur 
     app.listen(port, () => {
-        console.log('Server is running');
+        console.log(`Server is running on port :${port}`);
     });
 }).catch(error => console.log('TypeORM connection error: ', error));
 
