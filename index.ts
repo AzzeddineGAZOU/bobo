@@ -23,7 +23,7 @@ app.use(session({
     saveUninitialized : true
 }));
 app.use(cors({ origin : true }));
-
+const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : true }));
 
@@ -55,8 +55,8 @@ createConnection({
 }).then(async connection => {
     console.log('Connected to DB');
     // Connexion au serveur 
-    app.listen(3000, () => {
-        console.log('Server listening on port 3000');
+    app.listen(port, () => {
+        console.log('Server is running');
     });
 }).catch(error => console.log('TypeORM connection error: ', error));
 
